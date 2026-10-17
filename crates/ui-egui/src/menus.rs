@@ -278,12 +278,12 @@ pub const UI_COMMANDS: &[(&str, &str, Option<&str>, &str)] = &[
         "{on?: bool, at?: [x, y] (points from the canvas's top-left)} — the Contextual Task Bar stays where it is (or at `at`) instead of following the selection; with neither, toggles",
     ),
     ("window.taskBarReset", "Reset Bar Position", None, "{} — the Contextual Task Bar follows the selection again, under it"),
-    ("help.discord", "Join the ArtCraft Discord…", None, "{} — opens https://discord.gg/artcraft in the browser"),
-    ("help.appPage", "DesignCraft Website…", None, "{} — opens https://getartcraft.com/apps/designcraft"),
-    ("help.github", "DesignCraft on GitHub…", None, "{} — opens https://github.com/storytold/designcraft"),
+    ("help.discord", "Join the OfficeTools Discord…", None, "{} — opens https://discord.gg/officetools in the browser"),
+    ("help.appPage", "DesignCraft Website…", None, "{} — opens https://officetools.yosuaf.com/apps/designcraft"),
+    ("help.github", "DesignCraft on GitHub…", None, "{} — opens https://github.com/fyosua/officetools-designcraft"),
     ("help.issues", "Report an Issue…", None, "{} — opens the GitHub issue tracker"),
-    ("help.website", "ArtCraft Website…", None, "{} — opens https://getartcraft.com"),
-    ("help.app", "ArtCraft App Page…", None, "{app} — opens https://getartcraft.com/apps/{app} (e.g. photocraft)"),
+    ("help.website", "OfficeTools Website…", None, "{} — opens https://officetools.yosuaf.com"),
+    ("help.app", "ArtCraft App Page…", None, "{app} — opens https://officetools.yosuaf.com/apps/{app} (e.g. photocraft)"),
     (
         "help.about",
         "About DesignCraft",
@@ -2294,7 +2294,7 @@ pub enum AppMenuItem {
 /// The macOS application menu. Settings… is `app.preferences`, which `native_menu_tree` leaves out of Edit.
 pub const MAC_APP_MENU: &[AppMenuItem] = &[
     AppMenuItem::Cmd { id: "dc-about", label: "About DesignCraft", command: "help.about" },
-    AppMenuItem::Cmd { id: "dc-discord", label: "Join the ArtCraft Discord…", command: "help.discord" },
+    AppMenuItem::Cmd { id: "dc-discord", label: "Join the OfficeTools Discord…", command: "help.discord" },
     AppMenuItem::Sep,
     AppMenuItem::Cmd { id: "dc-settings", label: "Settings…", command: "app.preferences" },
     AppMenuItem::Sep,

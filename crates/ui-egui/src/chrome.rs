@@ -326,7 +326,7 @@ pub fn app_bar(app: &mut DesignApp, ui: &mut egui::Ui) {
                                 app.status(crate::i18n::tr(&app.ui.language, "Export a PDF, IDML or package to share — no cloud account needed."));
                             }
                             ui.add_space(8.0);
-                            // Always one click away: the ArtCraft community Discord.
+                            // Always one click away: the OfficeTools community Discord.
                             if crate::about::discord_button(ui, "Discord", vec2(78.0, 22.0)) {
                                 let _ = app.run("help.discord", json!({}));
                             }
@@ -1048,7 +1048,7 @@ fn recent_preview_texture(ctx: &egui::Context, path: &str, modified: Option<std:
     tex
 }
 
-/// Start screen: the ArtCraft community (Discord first) and project links.
+/// Start screen: the OfficeTools community (Discord first) and project links.
 fn community_card(app: &mut DesignApp, ui: &mut egui::Ui) {
     let t = Tokens::get(ui.ctx());
     egui::Frame::NONE.fill(t.panel).corner_radius(10.0).inner_margin(egui::Margin::same(14)).show(ui, |ui| {
@@ -1066,7 +1066,7 @@ fn community_card(app: &mut DesignApp, ui: &mut egui::Ui) {
                 ui.style_mut().wrap_mode = Some(egui::TextWrapMode::Wrap);
                 ui.label(crate::rtl::widget(
                     ui,
-                    egui::RichText::new(crate::i18n::tr(&app.ui.language, "Join the ArtCraft community")).font(semibold(14.0)).color(t.text_strong),
+                    egui::RichText::new(crate::i18n::tr(&app.ui.language, "Join the OfficeTools community")).font(semibold(14.0)).color(t.text_strong),
                 ));
                 ui.label(crate::rtl::widget(
                     ui,

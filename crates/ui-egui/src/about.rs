@@ -1,5 +1,5 @@
-//! Help › About DesignCraft: tabs About · Contributors · Models. About is the splash with the
-//! ArtCraft mark, version, and community links (Discord first and largest), plus the other ArtCraft
+//! Help › About OfficeTools Design: tabs About · Contributors · Models. About is the splash with the
+//! ArtCraft mark, version, and community links (Discord first and largest), plus the other OfficeTools
 //! apps; Contributors and Models are the compiled-in credits (`crate::credits`).
 
 use designcraft_engine::links;
@@ -9,13 +9,13 @@ use serde_json::json;
 use crate::DesignApp;
 use crate::theme::{Tokens, semibold};
 
-/// ArtCraft brand blue (from `docs/brand/artcraft-mark.svg`).
-pub const BRAND: Color32 = Color32::from_rgb(0x4e, 0x7b, 0xfb);
+/// OfficeTools brand red.
+pub const BRAND: Color32 = Color32::from_rgb(0xff, 0x41, 0x36);
 /// Discord's brand colour, used for the "Join our Discord" buttons (colour only; no Discord artwork).
 pub const DISCORD: Color32 = Color32::from_rgb(0x58, 0x65, 0xf2);
 
-/// The ArtCraft mark outline (viewBox -10 -19.42 136.34 136.34), from `docs/brand/artcraft-mark.svg`.
-const MARK_PATH: &str = "M104.28,49.49L81.55,0h-31.23l-3.17,4.76L14.75,53.63,0,75.85l21.55,21.55,63.79-36.94,16.99,37.04,14.01-21.74-12.06-26.27ZM32.89,65.66l32.42-48.87,10.91,23.77-43.32,25.09Z";
+/// The OfficeTools folder mark outline.
+const MARK_PATH: &str = "M20,30 a12,12 0 1,1 24,0 a12,12 0 1,1 -24,0 ";
 
 /// The other ArtCraft apps (app-page slug, name, what it is) — same list as the README.
 pub const SIBLINGS: &[(&str, &str, &str)] = &[
@@ -174,7 +174,7 @@ pub fn show(app: &mut DesignApp, ctx: &egui::Context) {
                     .color(t.text_dim),
             ));
             ui.add_space(16.0);
-            if discord_button(ui, crate::i18n::tr(&app.ui.language, "Join the ArtCraft Discord"), vec2(300.0, 40.0)) {
+            if discord_button(ui, crate::i18n::tr(&app.ui.language, "Join the OfficeTools Discord"), vec2(300.0, 40.0)) {
                 open = Some("discord");
             }
             ui.add_space(4.0);
